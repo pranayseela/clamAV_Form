@@ -20,13 +20,13 @@ namespace clamAV
             }
             else
             {
-                lblMsg.Text = "Please selcet a file to scan.";
+                lblMsg.Text = "Please select a file to scan.";
             }
         }
         public async Task Scan()
         {
             var clam = new ClamClient("localhost", 3310);
-            var scanResult = await clam.SendAndScanFileAsync(flUploadFile.PostedFile.InputStream);//.ScanFileOnServerAsync(flUploadFile.PostedFile.FileName);  //any file you would like!
+            var scanResult = await clam.SendAndScanFileAsync(flUploadFile.PostedFile.InputStream);//.ScanFileOnServerAsync(flUploadFile.PostedFile.FileName);
 
             switch (scanResult.Result)
             {
