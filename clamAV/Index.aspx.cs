@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using nClam;
 using System.Threading.Tasks;
 
@@ -20,7 +16,11 @@ namespace clamAV
         {
             if (flUploadFile.HasFile)
             {
-               await Scan();
+                await Scan();
+            }
+            else
+            {
+                lblMsg.Text = "Please selcet a file to scan.";
             }
         }
         public async Task Scan()
@@ -31,10 +31,10 @@ namespace clamAV
             switch (scanResult.Result)
             {
                 case ClamScanResults.Clean:
-                    lblMsg.Text = "The file is clean!";
+                    lblMsg.Text = "Scan Complete. The file is clean!";
                     break;
                 case ClamScanResults.VirusDetected:
-                    lblMsg.Text = "Virus Found! " + string.Format("Virus name: {0}", scanResult.InfectedFiles.First().VirusName);
+                    lblMsg.Text = "Scan Complete. Virus Found! " + string.Format("Virus name: {0}", scanResult.InfectedFiles.First().VirusName);
 
                     break;
                 case ClamScanResults.Error:
