@@ -66,6 +66,9 @@
                     /* Adjust button text vertical alignment */
                     padding-top: 5px;
         }
+        .auto-style2 {
+            width: 50%;
+        }
     </style>
 </head>
 <body>
@@ -73,9 +76,15 @@
         <div class="auto-style1">
             <br /><br />
 
-            File: <asp:FileUpload ID="flUploadFile" runat="server" BorderColor="Black" BorderStyle="Ridge" CssClass="auto-style1" Width="300px" />
+            
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnFileScan" runat="server" Text="Scan File" OnClick="btnFileScan_Click" CssClass="file-upload" />
+            
+            <table class="auto-style2" align="center">
+                <tr>
+                    <td><asp:FileUpload ID="flUploadFile" runat="server" BorderColor="Black" BorderStyle="Ridge" CssClass="auto-style1" Width="300px" /></td>
+                    <td><asp:Button ID="btnFileScan" runat="server" Text="Scan File" OnClick="btnFileScan_Click" CssClass="file-upload" /></td>
+                </tr>
+            </table>
             <br />
             <br />
             <asp:Label ID="lblMsg" runat="server" ForeColor="Red" Font-Bold="True" CssClass="auto-style1"></asp:Label>
