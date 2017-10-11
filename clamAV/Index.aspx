@@ -69,15 +69,36 @@
         .auto-style2 {
             width: 50%;
         }
+        .auto-style3 {
+            text-align: center;
+            font-weight: bold;
+            height: 1197px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server" enctype="multipart/form-data">
-        <div class="auto-style1">
+        <div class="auto-style3">
             <br /><br />
 
             
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             
             <table class="auto-style2" align="center">
                 <tr>
@@ -86,9 +107,7 @@
                 </tr>
             </table>
             <br />
-            <br />
             <asp:Label ID="lblMsg" runat="server" ForeColor="Red" Font-Bold="True" CssClass="auto-style1"></asp:Label>
-            <br />
         </div>
     </form>
 </body>
